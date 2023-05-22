@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Banking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Online Banking</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Accounts</a></li>
+      <li><a href="#">Credit Cards</a></li>
+      <li><a href="#">Loans</a></li>
+      <li><a href="#">Transactions</a></li>
+      <li><a href="#">Payments</a></li>
+      <li><a href="#">Reminders</a></li>
+      <li><a href="#">Report an Issue</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="accounts">
+      <h2>Accounts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Account Number</th>
+            <th>Account Type</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1234567890</td>
+            <td>Savings</td>
+            <td>$5,000.00</td>
+          </tr>
+          <tr>
+            <td>0987654321</td>
+            <td>Checking</td>
+            <td>$2,500.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="credit-cards">
+      <h2>Credit Cards</h2>
+      <ul>
+        <li>
+          <span class="card-type">Gold Card</span>
+          <span class="card-number">**** **** **** 1234</span>
+          <span class="available-credit">Available Credit: $1,000.00</span>
+        </li>
+        <li>
+          <span class="card-type">Silver Card</span>
+          <span class="card-number">**** **** **** 5678</span>
+          <span class="available-credit">Available Credit: $500.00</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="loans">
+      <h2>Loans</h2>
+      <ul>
+        <li>
+          <span class="loan-type">Personal Loan</span>
+          <span class="loan-amount">$10,000.00</span>
+          <span class="loan-status">Approved</span>
+        </li>
+        <li>
+          <span class="loan-type">Car Loan</span>
+          <span class="loan-amount">$20,000.00</span>
+          <span class="loan-status">Pending</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="transactions">
+      <h2>Transactions</h2>
+      <ul>
+        <li>
+          <span class="transaction-type">Withdrawal</span>
+          <span class="transaction-amount">-$100.00</span>
+          <span class="transaction-date">May 20, 2023</span>
+        </li>
+        <li>
+          <span class="transaction-type">Deposit</span>
