@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+  <meta charset="UTF-8">
+  <title>System Issue Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("bg-01.jpg");
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .home-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+    
+    .home-button a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #71b7e6;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .home-button a:hover {
+      background-color: #9b59b6;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .report-form {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    
+    .input-group {
+      margin-bottom: 15px;
+    }
+    
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .input-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .input-group .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .input-group .button-container button {
+      padding: 10px 20px;
+      background-color: purple;
+      color: #d208e9;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .input-group .button-container button:hover {
+      background-color: #9b59b6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="home-button">
+      <a href="homePage.html">Home</a>
+    </div>
+    <div class="container">
+      <h1>System Issue Report</h1>
+
+      <div class="report-form">
+        <div class="input-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        
+        <div class="input-group">
+          <label for="account-number">Account Number:</label>
+          <input type="text" id="account-number" placeholder="Enter your account number">
+        </div>
+        
+        <div class="input-group">
+          <label for="issue">Issue:</label>
+         
+          <input type="text" id="issue" placeholder="Describe the issue">
+        </div>
+        
+        <div class="input-group">
+          <label for="start-date">Issue Start Date:</label>
+          <input type="text" id="start-date" placeholder="Enter the issue start date">
+        </div>
+        
+       <div class="input-group button-container">
+  <div class="container-login100-form-btn">
+    <div class="wrap-login100-form-btn">
+      <div class="login100-form-bgbtn"></div>
+      <button class="login100-form-btn" onclick="submitReport()">
+        <u>Submit</u>
+      </button>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  
+    <script>
+      function submitReport() {
+        var name = document.getElementById('name').value;
+        var accountNumber = document.getElementById('account-number').value;
+        var issue = document.getElementById('issue').value;
+        var startDate = document.getElementById('start-date').value;
+        
+        if (!name || !accountNumber || !issue || !startDate) {
+          alert('Please fill in all the fields.');
+          return;
+        }
+        
+        // Add your report submission logic here
+        
+        alert('Report submitted!\n\nName: ' + name +
+              '\nAccount Number: ' + accountNumber +
+              '\nIssue: ' + issue +
+              '\nIssue Start Date: ' + startDate);
+        
+        // Clear the form after submission
+        clearForm();
+      }
+      
+      function clearForm() {
+        document.getElementById('name').value = '';
+        document.getElementById('account-number').value = '';
+        document.getElementById('issue').value = '';
+        document.getElementById('start-date').value = '';
+      }
+    </script>
+  </header>
+</body>
+</html>

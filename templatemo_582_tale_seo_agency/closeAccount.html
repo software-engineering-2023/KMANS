@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Responsive Registration Form | CodingLab</title>
+    <link rel="stylesheet" href="styleR.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="util.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/signature_pad"></script>
+    <style>
+      body {
+        background-image: url("bg-01.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .input-box .custom-file-label {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: purple;
+        color: #d208e9;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+   
+  
+      
+            .login100-form-btn {
+              text-decoration: none;
+            }
+            #signature-pad {
+    width: 50%;
+    height: 200px;
+    border: 1px solid #ccc;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  #clear-signature {
+    display: block;
+    margin-top: 5px;
+  }
+  .container {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 300px auto 0; /* Add margin-top to create space at the top */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto; /* Change the height to auto to adjust based on content */
+  }
+        
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Account closing Form</div>
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name on Account </span>
+              <input type="text" placeholder="Enter your full name" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Account Number </span>
+              <input type="text" placeholder="Enter your Account Number" required>
+            </div>
+            <div class="gender-details">
+              <input type="radio" name="gender" id="dot-1">
+              <input type="radio" name="gender" id="dot-2">
+              <input type="radio" name="gender" id="dot-3">
+              <span class="gender-title">Account type</span>
+              <div class="category">
+                <label for="dot-1">
+                  <span class="dot one"></span>
+                  <span class="gender">Current</span>
+                </label>
+                <label for="dot-2">
+                  <span class="dot two"></span>
+                  <span class="gender">Saving</span>
+                </label>
+              </div>
+            </div> 
+            <div class="input-box">
+              <span class="details">Company name </span>
+              <input type="text" placeholder="Full Address" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Phone number</span>
+              <input type="text" placeholder="Enter your Phone Number" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" placeholder="Enter your Email Addess" required>
+            </div>
+
+            <div class="input-box">
+              <span class="details">Occupation</span>
+              <input type="text" placeholder="Enter your Occupation" required>
+            </div>
+             
+            <div class="input-box">
+              <span class="details">Reason of closing account</span>
+              <input type="text" placeholder="Reason for closing" required>
+            </div>
+        
+             <div class="input-box">
+            <span class="details">Date of Reminder</span>
+            <input type="date" id="reminder-date" required>
+          </div>
+          </div>
+       
+            <div class="input-box">
+              <span class="details">Digital Signature</span>
+              <div id="signature-pad">
+                <canvas></canvas>
+              </div>
+              <button id="clear-signature">Clear Signature</button>
+              <input type="hidden" id="signature-data" required>
+            </div>
+            
+           
+          </div>
+      
+          
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <a href="homePage.html" class="login100-form-btn">
+                Close Account
+              </a>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+    <script>
+      // Initialize the Signature Pad
+      var canvas = document.querySelector("canvas");
+      var signaturePad = new SignaturePad(canvas);
+    
+      // Clear the signature
+      var clearButton = document.getElementById("clear-signature");
+      clearButton.addEventListener("click", function () {
+        signaturePad.clear();
+      });
+    
+      // Get the signature data and update the hidden input
+      var signatureDataInput = document.getElementById("signature-data");
+      signaturePad.onEnd = function () {
+        var data = signaturePad.toDataURL();
+        signatureDataInput.value = data;
+      };
+    </script>
+    
+  </body>
+  </html>

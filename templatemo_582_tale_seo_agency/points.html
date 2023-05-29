@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>templatemo_582_tale_seo_agency | CodingLab</title>
+  <link rel="stylesheet" href="styleR.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="util.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <style>
+    body {
+      background-image: url("bg-01.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .input-box .custom-file-label {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: purple;
+      color: #d208e9;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .home-button {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    
+      .home-button a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #71b7e6;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+    
+      .home-button a:hover {
+        background-color: #9b59b6;
+      }
+    /* CSS styles for the points redemption page */
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .points {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .redeem-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .redeem-button button {
+      padding: 10px 20px;
+      background-color: #71b7e6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .redeem-button button:hover {
+      background-color: #9b59b6;
+    }
+  </style>
+  
+<body>
+  <header>
+    <div class="home-button">
+      <a href="homePage.html">Home</a>
+    </div>
+  
+
+  <h1>Points Redemption</h1>
+  
+  <div class="points">
+    Your current points: <span id="points">100</span>
+  </div>
+  
+  <div class="redeem-button">
+    <button onclick="redeemPoints()">Redeem for Cash</button>
+  </div>
+</header>
+  <script>
+    function redeemPoints() {
+      // Add your redemption logic here
+      var currentPoints = document.getElementById('points').innerText;
+      // Perform the necessary calculations and operations to redeem the points for cash
+      
+      // Example: Display a success message and update the points value
+      alert('Congratulations! You have successfully redeemed your points for cash.');
+      document.getElementById('points').innerText = "0"; // Update the points value to zero or the redeemed amount
+    }
+  </script>
+</body>
+</html>

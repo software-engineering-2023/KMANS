@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <title>templatemo_582_tale_seo_agency | CodingLab</title>
+  <link rel="stylesheet" href="styleR.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="util.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  body {
+      background-image: url("bg-01.jpg");
+      background-size: cover;
+      background-position: center;
+  }
+
+  .input-box .custom-file-label {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: purple;
+      color: #d208e9;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+
+  .home-button {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    
+      .home-button a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #71b7e6;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+    
+      .home-button a:hover {
+        background-color: #9b59b6;
+      }
+
+  /* CSS styles for the points redemption page */
+  h1 {
+      text-align: center;
+      margin-top: 30px;
+  }
+  </style>
+  <meta charset="UTF-8">
+  <title>Gas Bill Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    
+    h1 {
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: none;
+  }
+  .home-button {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .home-button a {
+      padding: 10px 20px;
+      background-color: #71b7e6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .home-button a:hover {
+      background-color: #9b59b6;
+  }
+
+    
+
+    
+    .payment-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    
+    .input-group {
+      margin-bottom: 15px;
+    }
+    
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .input-group select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .input-group .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .input-group .button-container button {
+      padding: 10px 20px;
+      background-color: #71b7e6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .input-group .button-container button:hover {
+      background-color: #9b59b6;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="home-button">
+            <a href="homePage.html">Home</a>
+        </div>
+  <h1>Telephone Bill Payment</h1>
+  
+  <div class="payment-form">
+    
+    
+    
+    
+    <div class="input-group">
+        <label for="mobile-number">Mobile Number:</label>
+        <input type="text" id="mobile-number" placeholder="Enter your Mobile Number">
+      </div>
+
+      
+
+    <div class="input-group">
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" placeholder="Enter the bill amount">
+    </div>
+    
+   
+    <div class="input-group">
+      <label for="payment-method">Payment Method:</label>
+      <select id="payment-method">
+        <option value="credit-card">Credit Card</option>
+        <option value="bank-transfer">Bank Transfer</option>
+        <!-- Add more payment method options as needed -->
+      </select>
+    </div>
+    
+    <div class="input-group">
+      <label for="expiry-date">Payment Reference:</label>
+      <input type="text" id="payment-reference" placeholder="Account Number or Card Number">
+    </div>
+    <div class="input-group">
+        <label for="pin-code">Pin Code:</label>
+        <input type="text" id="pin-code" placeholder="Enter your Pin Code">
+      </div>
+    
+    <div class="input-group button-container">
+      <button onclick="payBill()"><u>Pay Bill</u></button>
+      
+    </div>
+  </div>
+  
+  <script>
+    function payBill() {
+      var mobileNumber = document.getElementById('mobile-number').value;
+      var pinCode= document.getElementById('pin-code').value;
+      var amount = document.getElementById('amount').value;
+      var paymentMethod = document.getElementById('payment-method').value;
+      var paymentReference = document.getElementById('payment-reference').value;
+      
+      if (!mobileNumber || !pinCode  || !amount || !paymentMethod || !paymentReference) {
+        alert('Please fill in all the fields.');
+        return;
+      }
+      
+      // Perform the gas bill payment logic here
+      
+      alert('Telephone bill payment successful!\n\nMobile Number: ' + mobileNumber +
+            '\nAmount: ' + amount +
+            '\nPayment Method: ' + paymentMethod +
+            '\nPayment Reference: ' + paymentReference);
+      
+      // Clear the form after payment
+      clearForm();
+    }
+    
+    function clearForm() {
+      document.getElementById('mobile-number').value = '';
+      document.getElementById('pin-code').value = '';
+      document.getElementById('amount').value = '';
+      document.getElementById('payment-method').value = '';
+      document.getElementById('payment-reference').value = '';
+    }
+  </script>
+  </header>
+</body>
+</html>
